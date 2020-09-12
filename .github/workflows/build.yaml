@@ -38,9 +38,7 @@ jobs:
 
       - name: Run Unit tests.
         run: 
-          echo $PATH
-          #cd greetings
-          #go test
+          cd greetings; go test
           #make test-coverage
 
       #- name: Upload Coverage report to CodeCov
