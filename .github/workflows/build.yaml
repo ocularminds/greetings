@@ -36,11 +36,8 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v1
 
-      - name: Run Unit tests.
-        run: cd greetings; go test
-
-      - name: Test Coverage
-        run: go test -race -coverprofile=coverage.txt -covermode=atomic
+      - name: Run Unit tests and Coverage
+        run: cd greetings; go test -race -coverprofile=coverage.txt -covermode=atomic
 
       - name: Upload Coverage report to CodeCov
         run: bash <(curl -s https://codecov.io/bash)
