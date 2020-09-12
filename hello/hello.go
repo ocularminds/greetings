@@ -26,6 +26,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(message + "\nOK ")
+	fmt.Println(message + "\nOK   ")
 
 }
