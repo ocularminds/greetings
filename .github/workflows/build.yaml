@@ -64,4 +64,4 @@ jobs:
 
       - name: Build
         run: 
-          cd hello | go build
+          cd hello; go build
