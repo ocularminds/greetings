@@ -52,5 +52,5 @@ func randomFormat() string {
 
 //Greet greetings hello
 func Greet() string {
-	return "Hello GitHub Actions"
+	return "Hello GitHub Actions - With Update"
 }

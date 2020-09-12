@@ -24,7 +24,29 @@ func TestHelloEmpty(t *testing.T) {
 }
 func TestGreetsGitHub(t *testing.T) {
 	result := Greet()
-	if result != "Hello GitHub Actions" {
+	if result != "Hello GitHub Actions - With Update" {
 		t.Errorf("Greet() = %s; want Hello GitHub actions", result)
+	}
+}
+
+func TestHellos(t *testing.T) {
+	names := []string{"Bisola", "Bunmi", "Fatmat", "Ngozi"}
+	messages, err := Hellos(names)
+	if err != nil {
+		t.Error("Hellos() creates error")
+	}
+	if len(messages) < 3 {
+		t.Error("No message generated.")
+	}
+}
+
+func TestHellosWithEmptyName(t *testing.T) {
+	names := []string{"", "", "Fatmat", "Ngozi"}
+	messages, err := Hellos(names)
+	if err == nil {
+		t.Error("Hellos() with empty name expects to throw error")
+	}
+	if len(messages) > 0 {
+		t.Error("No message expected.")
 	}
 }

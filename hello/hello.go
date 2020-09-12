@@ -15,7 +15,7 @@ func main() {
 
 	message, err = greetings.HelloRandom("Daniels")
 	fmt.Println(message)
-	names := []string{"Gladys", "Bunmi", "Fatmat", "Ngozi"}
+	names := []string{"Bisola", "Bunmi", "Fatmat", "Ngozi"}
 	messages, err := greetings.Hellos(names)
 	if err != nil {
 		log.Fatal(err)
@@ -26,6 +26,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(message)
+	fmt.Println(message + "\nOK")
 
 }
