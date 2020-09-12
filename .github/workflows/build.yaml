@@ -21,8 +21,8 @@ jobs:
       - name: Lint Go Code
         run: |
           export PATH=$PATH:$(go env GOPATH)/bin
-          go install golang.org/x/lint/golint
-          golint ./... 
+          #go install golang.org/x/lint/golint
+          #golint ./... 
 
   test:
     name: Test
